@@ -1,0 +1,82 @@
+<style>
+    label
+    {
+        text-align:center;
+        font-family:Monospace;
+        font-weight:bold;
+        color:white;
+    }
+    label
+    {
+        font-size:1.2em;
+    }
+    form
+    {
+       background-color:#7F4848;
+       margin:auto;
+    }
+    img
+    {
+        background-color:#662121;
+        margin:auto;
+    }
+    body
+    {
+        background-color:#442200;
+    }
+</style>
+
+<body>
+<img class="col-sm-offset-4" src="/img/11.PNG">
+</body>
+
+<form action="asciify/result" method="post" class="form-horizontal">
+    <br><br><br><br>
+    
+    <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-4" layout:"fixed">
+            <pre class="text-center"><%= @output1 %></pre>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="col-sm-offset-2 col-sm-3 control-label">T y p e</label>
+        <div class="col-sm-1">
+            <select class="form-control" name="type">
+                <option value="한 식">한식</option>
+                <option value="일 식">일식</option>
+                <option value="중 식">중식</option>
+                <option value="야 식">야식</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="col-sm-offset-3 col-sm-2 control-label">Temper control</label>
+        <div class="col-sm-2">
+            <label class="checkbox-inline">
+              <input type="checkbox" name="control" value="매움"> Spicy
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="control" value="안 매움"> Not
+            </label>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="col-sm-offset-3 col-sm-2 control-label">N a m e</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" name="name" placeholder="Your name">
+        </div>
+    </div>
+    
+    <br>
+
+    <div class="form-group">
+        <div class="col-sm-offset-7 col-sm-1">
+            <input type="submit" class ="btn-sm btn-default" value="Food!">
+        </div>
+    </div>
+    
+    <br><br><br>
+</form>

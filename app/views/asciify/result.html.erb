@@ -1,0 +1,77 @@
+<style>
+    h2, tr
+    {
+        text-align:center;
+        font-family:Monospace;
+        font-weight:bold;
+        color:white;
+    }
+    tr
+    {
+        font-family:serif;
+        font-size:1.2em;
+    }
+    table
+    {
+        text-align:center;
+        border-color:#ADA96E;
+    }
+    form
+    {
+       background-color:#7F4848; 
+       margin:auto;
+    }
+    body
+    {
+        background-color:#442200;
+    }
+</style>
+
+<body>
+    <img class="col-sm-offset-4" src="/img/11.PNG">
+</body>
+
+<form action="asciify/result" method="post" class="form-horizontal">
+    <div class="form-group">
+        <br><br><h2 class="col-sm-offset-4 col-sm-4"><%=@name%>이 먹을 음식은?</h2>
+    </div>
+    
+    <br><br>
+    <div class="form-group">
+        <table class="col-sm-offset-4 col-sm-4 text-center" width="700" height="315" border="3" style="table-layout:fixed text-align:center">
+            <tr>
+                <td>종 류</td>
+                <td><%=@type%></td>
+            </tr>
+            <tr class="success">
+                <td>맵기 정도</td>
+                <td><%=@t_control%></td>
+            </tr>
+            <tr>
+                <td>가게명</td>
+                <td><%=@result[0]%></td>
+            </tr>
+            <tr>
+                <td>음식 이름</td>
+                <td><%=@result[1]%></td>
+            </tr>
+            <tr>
+                <td>가격</td>
+                <td><%=@result[2]%></td>
+            </tr>
+            <tr>
+                <td>전화번호</td>
+                <td><%=@result[3]%></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    
+    <div class="form-group">
+        <div class="col-sm-offset-7 col-sm-2">
+            <a href="/" class ="btn-sm btn-default">메뉴 다시 고르기</a>
+        </div>
+    </div>
+    
+    <br><br><br>
+</form>
